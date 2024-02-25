@@ -1,6 +1,14 @@
 package Tests;
 
-public class LoginTest {
+import org.testng.annotations.Test;
 
-	//gfhahshdhdhd
+public class LoginTest 
+{
+
+@Test
+public void Testcase1() {
+	
+
+}
+    
 }
