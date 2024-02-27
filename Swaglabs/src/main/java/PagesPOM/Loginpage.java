@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class Loginpage 
 {
-WebDriver driver;
+ WebDriver driver;
     
     // Locators
     @FindBy(xpath = "//input[@id='user-name']")
@@ -19,10 +19,13 @@ WebDriver driver;
     @FindBy(xpath = "//input[@id='login-button']")
     private WebElement loginButton;
     
+    @FindBy(xpath = "//div[@class='login_logo']")
+    private WebElement Loginlogo;
+    
  // Constructor
     public void LoginPage(WebDriver driver) {
         this.driver = driver;
-        PageFactory.initElements(driver, this);
+        PageFactory.initElements(driver, driver);
     }
     
  // Methods to interact with elements
@@ -39,6 +42,12 @@ WebDriver driver;
     public void clickLoginButton() {
         loginButton.click();
     }
+    public boolean verifylogo()
+    {
+    	boolean LOGO = Loginlogo.isDisplayed();
+		return LOGO;
+    }
+    
     
     // Method to perform login action
     public void login(String username, String password) {
