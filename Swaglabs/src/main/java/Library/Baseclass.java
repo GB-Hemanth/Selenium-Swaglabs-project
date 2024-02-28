@@ -19,8 +19,8 @@ public class Baseclass
 	@BeforeMethod
 	    public void setUp() throws IOException {
 	        // Set up WebDriver
-	        System.setProperty("webdriver.chrome.driver", "./Resources/chromedriver.exe");
-		//WebDriverManager.chromedriver().setup();
+	        //System.setProperty("webdriver.chrome.driver", "./Resources/chromedriver.exe");
+		WebDriverManager.chromedriver().setup();
 	         driver = new ChromeDriver();
 	        driver.manage().window().maximize();
 	        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
